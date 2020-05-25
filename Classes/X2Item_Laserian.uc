@@ -19,7 +19,7 @@ static function array<X2DataTemplate> CreateTemplates()
 static function X2DataTemplate CreateTemplate_CustomShotgun()
 {
 	local X2WeaponTemplate Template;
-	local WeaponDamageValue Foo;
+	local WeaponDamageValue LaserianDamageValue;
 
 	Template = X2WeaponTemplate(class'X2Item_DefaultWeapons'.static.CreateTemplate_XComShotgun('WPN_CustomShotgun'));
 	Template.bIsEpic = true;
@@ -31,8 +31,8 @@ static function X2DataTemplate CreateTemplate_CustomShotgun()
 	Template.bAlwaysRecovered = true;
 	
 
-	Foo.Damage += 30;
-	Template.BaseDamage = Foo;
+	LaserianDamageValue.Damage += 30;
+	Template.BaseDamage = LaserianDamageValue;
 	Template.WeaponPanelImage = "_BeamShotgun";
 	Template.Aim = 0;
 	Template.iRange = 1;
